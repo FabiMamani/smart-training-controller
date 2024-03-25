@@ -25,7 +25,8 @@ jobs:
         
     - name: Build with Gradle
       run: ./gradlew build
-        
+    - name: Run tests and generate JaCoCo report
+      run: ./gradlew test jacocoTestReport   
     - name: Archive Test Results
       uses: actions/upload-artifact@v2
       with:
